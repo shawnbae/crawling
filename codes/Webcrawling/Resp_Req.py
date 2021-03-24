@@ -7,3 +7,7 @@ print(resp) # 성
 url2 = "https://www.python.org/1"
 resp2 = requests.get(url2)
 print(resp2) # 실패
+
+# 페이지의 text 출력하기
+html = resp.text
+print(html)
