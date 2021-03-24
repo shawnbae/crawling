@@ -36,3 +36,5 @@ out_file_path = "../../dataset/download_image.jpg"
 with open(out_file_path, 'wb') as out_file:
   out_file.write(target_img_resp.content)
   print("이미지 저장 완료")
+  
+# 하이퍼링크 
