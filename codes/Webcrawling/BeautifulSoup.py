@@ -30,7 +30,7 @@ target_img_src = target_img.get('src')
 print("이미지 파일 경로: ", target_img_src)
 
 target_img_resp = requests.get('http:' + target_img_src)
-out_file_path = "./output/dowload_image.jpg"
+out_file_path = "../../dataset/download_image.jpg"
 
 # 이미지 저장하기
 with open(out_file_path, 'wb') as out_file:
