@@ -24,4 +24,15 @@ print(first_img)
 print("\n")
 
 target_img = soup.find(name = 'img', attrs =  {'alt':'Seoul-Metro-2004-20070722.jpg'})
-print(target_img)
+print("HTML 요소: ", target_img)
+
+target_img_src = target_img.get('src')
+print("이미지 파일 경로: ", target_img_src)
+
+target_img_resp = requests.get('http:' + target_img_src)
+out_file_path = "./output/dowload_image.jpg"
+
+# 이미지 저장하기
+with open(out_file_path, 'wb') as out_file:
+  out_file.write(target_img_resp.content)
+  print("이미지 저장 완료")
