@@ -20,3 +20,8 @@ print('title 태그 문자열: ', soup.title.string)
 
 # image
 first_img = soup.find(name = 'img')
+print(first_img)
+print("\n")
+
+target_img = soup.find(name = 'img', attrs =  {'alt':'Seoul-Metro-2004-20070722.jpg'})
+print(target_img)
