@@ -54,5 +54,6 @@ subway_image = soup.select("#mw-content-text > div > table:nth-child(3) > \
                            tbody > tr:nth-child(2) > td > a > img")
 print(subway_image)
 
+subway_image2 = soup.select("tr > td > a > img")
 
 
