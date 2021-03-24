@@ -48,3 +48,11 @@ print("/wiki/ 문자열이 포함된 하이퍼링크: ", wiki_links)
 
 external_links = soup.find_all(name = "a", attrs={"class": "external text"}, limit = 3)
 print("class 속성으로 추출한 하이퍼링크: ", external_links)
+
+# css selector 
+subway_image = soup.select("#mw-content-text > div > table:nth-child(3) > \
+                           tbody > tr:nth-child(2) > td > a > img")
+print(subway_image)
+
+
+
