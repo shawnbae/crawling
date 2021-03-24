@@ -1,3 +1,4 @@
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -38,3 +39,12 @@ with open(out_file_path, 'wb') as out_file:
   print("이미지 저장 완료")
   
 # 하이퍼링크 
+links = soup.find_all("a")
+print("하이퍼링크의 개수: ", len(links))
+print("첫 3개의 원소: ", links[:3])
+
+wiki_links = soup.find_all(name = "a", href=re.compile("/wiki/"), limit= 3)
+print("/wiki/ 문자열이 포함된 하이퍼링크: ", wiki_links)
+
+external_links = soup.find_all(name = "a", attrs={"class": "external text"}, limit = 3)
+print("class 속성으로 추출한 하이퍼링크: ", external_links)
