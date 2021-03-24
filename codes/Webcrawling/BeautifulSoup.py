@@ -17,3 +17,6 @@ print('\n')
 print('title 태그 요소: ', soup.title)
 print('title 태그 이름: ', soup.title.name)
 print('title 태그 문자열: ', soup.title.string)
+
+# image
+first_img = soup.find(name = 'img')
