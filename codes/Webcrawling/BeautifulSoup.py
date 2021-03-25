@@ -68,9 +68,8 @@ print(id_selector2)
 id_selector3 = soup.select('p#siteNotice')
 print(id_selector3)
 
-id_selector4 = soup.select('.mw-headline')
-print(id_selector4)
+class_selector4 = soup.select('.mw-headline')
+print(class_selector)
 
-
-
-
+class_selector2 = soup.select('span.mw-headline')
+print(class_selector2)
