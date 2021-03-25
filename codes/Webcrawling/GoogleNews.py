@@ -36,3 +36,20 @@ for item in news_items[:10]:
   news_reporting_date = news_reporting_datetime[0]
   news_reporting_time = news_reporting_datetime[1][:-1]
   print(news_reporting_date, news_reporting_time)
+  
+# 뉴스 목록 함수로 정의하기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
