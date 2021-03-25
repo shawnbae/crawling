@@ -13,3 +13,6 @@ soup = BeautifulSoup(html_src, 'html.parser')
 news_items = soup.select('div[class="xrnccd"]')
 print(news_items[:3])
 
+for news in news_items:
+  news.find('a', class_ = 'VDXfz')
+  
