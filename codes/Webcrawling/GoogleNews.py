@@ -38,7 +38,22 @@ for item in news_items[:10]:
   print(news_reporting_date, news_reporting_time)
   
 # 뉴스 목록 함수로 정의하기
-
+def google_news_clipping(url, limit= 10):
+  
+  resp = requests.get(url)
+  html_src = resp.text
+  soup = BeautifulSoup(html_src, 'html.parser')
+  
+  news_items = soup.select('div[class="xrnccd"]')
+  
+  links=[]; titles=[]; contents=[]; agencies=[]; reporting_dates=[]; reporting_times=[];
+  
+  for item in news_items[:limit]:
+    link = item.find('a', attrs = {'class':'VDXfz'}).get('href')
+    news_link = base_url + link[1:]
+    links.append(news_link)
+    
+    
 
 
 
