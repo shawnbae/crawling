@@ -15,4 +15,13 @@ print(news_items[:3])
 
 for item in news_items[:3]:
   link = item.find('a', attrs = {'class':'VDXfz'})
+  news_link = base_url + link[1:]
+  print(news_link)
+  
+  news_title = item.find('a', attrs = {'class':'DY5T1d'}).getText()
+  print(news_title)
+  
+  news_content = item.find('span', attrs = {'class':'xBbh9'}).text
+  print(news_content)
+  
   
