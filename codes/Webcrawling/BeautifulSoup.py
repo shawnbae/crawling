@@ -56,4 +56,10 @@ print(subway_image)
 
 subway_image2 = soup.select("tr > td > a > img")
 
+external_links = soup.select('a[class="external text"]')
+print(external_links[:3])
+
+id_selector = soup.select('#siteNotice')
+print(id_selector)
+
 
