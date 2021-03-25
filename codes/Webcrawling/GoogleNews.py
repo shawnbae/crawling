@@ -11,9 +11,9 @@ soup = BeautifulSoup(html_src, 'html.parser')
 
 # 뉴스 아이템 블록 선택하기
 news_items = soup.select('div[class="xrnccd"]')
-print(news_items[:3])
 
-for item in news_items[:3]:
+# 10개 뉴스 날짜, 시각, 제목, 기관, 텍스트 불러오기
+for item in news_items[:10]:
   link = item.find('a', attrs = {'class':'VDXfz'}).get('href')
   news_link = base_url + link[1:]
   print(news_link)
