@@ -62,4 +62,15 @@ print(external_links[:3])
 id_selector = soup.select('#siteNotice')
 print(id_selector)
 
+id_selector2 = soup.select('div#siteNotice')
+print(id_selector2)
+
+id_selector3 = soup.select('p#siteNotice')
+print(id_selector3)
+
+id_selector4 = soup.select('.mw-headline')
+print(id_selector4)
+
+
+
 
