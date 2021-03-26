@@ -99,7 +99,7 @@ def google_news_clipping_keyword(keyword_input, limit = 5):
     links.append(news_link)
     
     news_title = item.find('a', attrs = {'class':'DY5T1d'}).getText()
-    titles.append()
+    titles.append(news_title)
     
     news_content = item.find('span', attrs = {'class':'xBbh9'}).text
     contents.append(news_content)
@@ -121,7 +121,7 @@ def google_news_clipping_keyword(keyword_input, limit = 5):
 
 # 뉴스 목록 정리하기
 search_word = input("검색어 입력: ")
-news = google_news_clipping_keyword(search_word, 2)
+news = google_news_clipping_keyword(search_word, 5)
 print(news['link'])
 print(news['agency'])
   
