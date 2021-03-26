@@ -76,6 +76,7 @@ def google_news_clipping(url, limit= 10):
 news = google_news_clipping(search_url, 10)
 print(news)
 
+# 키워드 기반으로 구글 뉴스 클리핑하기
 
 
 
