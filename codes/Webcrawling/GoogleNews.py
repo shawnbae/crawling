@@ -119,7 +119,11 @@ def google_news_clipping_keyword(keyword_input, limit = 5):
     
   return result
 
-  
+# 뉴스 목록 정리하기
+search_word = input("검색어 입력: ")
+news = google_news_clipping_keyword(search_word, 2)
+print(news['link'])
+print(news['agency'])
   
   
   
