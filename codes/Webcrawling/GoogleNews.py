@@ -71,7 +71,7 @@ def google_news_clipping(url, limit= 10):
     
     result = {'link':links, 'title':titles, 'contents':contents, 'agency':agencies, \
               'date':reporting_dates, 'time': reporting_times}
-    return result
+  return result
 
 news = google_news_clipping(search_url, 10)
 print(news)
