@@ -18,5 +18,9 @@ driver.implicitly_wait(3)
 my_id = "내 id"
 my_pw = "내 password"
 
-
+driver.find_element_by_id('danawa-member-login-input-id').send_keys(my_id)
+driver.implicitly_wait(2)
+driver.find_element_by_name('password').send_keys(my_pw)
+driver.implicitly_wait(2)
+driver.find_element_by_css_selector('button.btn_login').click()
 driver.quit()
