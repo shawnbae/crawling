@@ -124,19 +124,3 @@ search_word = input("검색어 입력: ")
 news = google_news_clipping_keyword(search_word, 5)
 print(news['link'])
 print(news['agency'])
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
