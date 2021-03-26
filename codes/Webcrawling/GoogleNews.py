@@ -95,7 +95,30 @@ def google_news_clipping_keyword(keyword_input, limit = 5):
 
   for item in news_items[:limit]:
     link = item.find('a', attrs = {'class':'VDXfz'}).get('href')
-  
+    news_link = base_url + link[1:]
+    links.append(news_link)
+    
+    news_title = item.find('a', attrs = {'class':'DY5T1d'}).getText()
+    titles.append()
+    
+    news_content = item.find('span', attrs = {'class':'xBbh9'}).text
+    contents.append(news_content)
+    
+    news_agency = item.find('a', attrs = {'class':'wEwyrc AVN2gc uQIVzc Sksgp'}).text
+    agencies.append(news_agency)
+    
+    news_reporting = item.find('time', attrs = {'class':'WW6dff uQIVzc Sksgp'})
+    news_reporting_datetime = news_reporting.get('datetime').split('T')
+    news_reporting_date = news_reporting_datetime[0]
+    news_reporting_time = news_reporting_datetime[1][:-1]
+    reporting_dates.append(news_reporting_date)
+    reporting_times.append(news_reporting_time)
+    
+  result = {'link':links, 'title':titles, 'contents':contents, 'agency':agencies, \
+            'date':reporting_dates, 'time':reporting_times}
+    
+  return result
+
   
   
   
