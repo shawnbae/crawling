@@ -65,7 +65,9 @@ def google_news_clipping(url, limit= 10):
     news_reporting = item.find('time', attrs = {'class':'WW6dff uQIVzc Sksgp'})
     news_reporting_datetime = news_reporting.get('datetime').split('T')
     news_reporting_date = news_reporting_datetime[0]
-    
+    news_reporting_time = news_reporting_datetime[1][:-1]
+    reporting_dates.append(news_reporting_date)
+    reporting_times.append(news_reporting_time)
 
 
 
