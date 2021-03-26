@@ -59,7 +59,11 @@ def google_news_clipping(url, limit= 10):
     news_content = item.find('span', attrs = {'class':'xBbh9'}).text
     contents.append(news_content)
     
-    news_agency
+    news_agency = item.find('a', attrs = {'class':'wEwyrc AVN2gc uQIVzc Sksgp'}).text
+    agencies.append(news_agency)
+    
+    news_reporting = item.find('time', attrs = {'class':'WW6dff uQIVzc Sksgp'})
+    news
 
 
 
