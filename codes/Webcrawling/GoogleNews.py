@@ -53,7 +53,13 @@ def google_news_clipping(url, limit= 10):
     news_link = base_url + link[1:]
     links.append(news_link)
     
-    news_title = item.find('a', attrs = {'class':''})
+    news_title = item.find('a', attrs = {'class':'DY5T1d'}).getText()
+    titles.append(news_title)
+    
+    news_content = item.find('span', attrs = {'class':'xBbh9'}).text
+    contents.append(news_content)
+    
+    news_agency
 
 
 
