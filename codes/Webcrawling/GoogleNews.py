@@ -77,7 +77,32 @@ news = google_news_clipping(search_url, 10)
 print(news)
 
 # 키워드 기반으로 구글 뉴스 클리핑하기
+keyword_input = '서울시장'
+keyword = urllib.parse.quote(keyword_input)
 
+def google_news_clipping_keyword(keyword_input, limit = 5):
+  
+  keyword = urllib.parse.quote(keyword_input)
+  
+  url = base_url + "/search?q=" + keyword + "&hl=ko&gl=KR&ceid=KR%Ako"
+  
+  resp = requests.get(url)
+  html_src = resp.text
+  soup = BeautifulSoup(html_src, 'html.parser')
+  
+  news_items = soup.select('div[class="xrnccd"]')
+  links=[]; titles=[]; contents=[]; agencies=[]; reporting_dates=[]; reporting_times=[];
+
+  for item in news_items[:limit]:
+    link = item.find('a', attrs = {'class':'VDXfz'}).get('href')
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
