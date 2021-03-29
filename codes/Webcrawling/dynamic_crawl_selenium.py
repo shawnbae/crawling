@@ -26,6 +26,9 @@ driver.find_element_by_css_selector('button.btn_login').click()
 
 
 # 관심목록 가져오기
+wishlist = driver.find_element_by_css_selector('li.interest_goods_service > a').click()
+driver.implicitly_wait(2)
+html_src = 
 
 #
 
