@@ -32,5 +32,5 @@ html_src = driver.page_source
 
 # 
 
-# 브라우
+# 브라우저 
 driver.quit()
