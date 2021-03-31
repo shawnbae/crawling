@@ -32,5 +32,5 @@ html_src = driver.page_source
 
 # 
 
-# 브라우저 
+# 브라우저 종 
 driver.quit()
