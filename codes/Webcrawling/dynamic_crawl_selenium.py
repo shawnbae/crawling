@@ -40,5 +40,13 @@ soup = BeautifulSoup(html_src, 'html.parser')
 wish_table = soup.select('table[class="tbl wish_tbl"]')[0]
 wish_items = wish_table.select('tbody tr')
 
+for item in wish_items:
+  title = item.find('div', {'class':'tit'}).text
+  price = item.find('span', {'class':'price'}).text
+  link = item.find('a', href = re.compile('prod.danawa.com/info/')).get('href')
+  print(title)
+  print(price)
+  print(link)
+
 # 브라우저 종료하기  
 driver.quit()
