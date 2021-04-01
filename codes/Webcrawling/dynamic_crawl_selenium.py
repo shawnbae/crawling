@@ -37,7 +37,8 @@ from bs4 import BeautifulSoup
 import re
 soup = BeautifulSoup(html_src, 'html.parser')
 
-
+wish_table = soup.select('table[class="tbl wish_tbl"]')[0]
+wish_items = wish_table.select('tbody tr')
 
 # 브라우저 종료하기  
 driver.quit()
