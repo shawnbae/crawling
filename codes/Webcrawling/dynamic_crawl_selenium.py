@@ -33,6 +33,10 @@ driver.close()
 print(html_src[:500])
 
 # 관심상품 목록 HTML페이지를 BeautifulSoup로 파싱하기
+from bs4 import BeautifulSoup
+import re
+soup = BeautifulSoup(html_src, 'html.parser')
+
 
 
 # 브라우저 종료하기  
