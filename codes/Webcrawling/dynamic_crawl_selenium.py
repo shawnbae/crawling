@@ -29,6 +29,7 @@ driver.find_element_by_css_selector('button.btn_login').click()
 wishlist = driver.find_element_by_css_selector('li.interest_goods_service > a').click()
 driver.implicitly_wait(2)
 html_src = driver.page_source
+driver.close()
 
 # 
 
