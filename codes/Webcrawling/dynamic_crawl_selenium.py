@@ -30,6 +30,7 @@ wishlist = driver.find_element_by_css_selector('li.interest_goods_service > a').
 driver.implicitly_wait(2)
 html_src = driver.page_source
 driver.close()
+print(html_src[:500])
 
 # 
 
