@@ -70,4 +70,28 @@ def download_bok_statistics_by_keyword():
     value = [t.text for i, t in enumerate(table_items) if i % 3 == 1]
     change = [t.text for i, t in enumerate(table_items) if i % 3 == 2]
     
-    # CSV형태의 파일로 저장하
+    # CSV형태의 파일로 저장하기
+    result_file = open('./data/bok_statistics_%s.csv' % keyword, 'w')
+    
+    for i in range(len(date)):
+      result_file.write("%s, %s, %s" % (date[i], value[i], change[i]))
+      result_file.write('\n')
+      
+    result_file.close()
+    print("키워드 '%s'에 대한 통계지표를 저장하였습니다." % keyword)
+    
+    return date, value, change
+  
+# "CD수익률" 통계지표를 별도로 검색, CSV 파일로 저장하기
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
