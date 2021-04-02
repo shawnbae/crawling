@@ -85,14 +85,3 @@ def download_bok_statistics_by_keyword():
 # "CD수익률" 통계지표를 별도로 검색, CSV 파일로 저장하기
 result = download_bok_statistics_by_keyword()
 print(result)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
