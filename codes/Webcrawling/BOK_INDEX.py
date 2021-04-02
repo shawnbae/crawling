@@ -44,7 +44,7 @@ def download_bok_statistics_by_keyword():
     items3 = driver.find_elements_by_css_selector('a[class="a-c4-list ng-binding"]')  
     driver.implicitly_wait(3)
     
-    items = items[1:] + items2 + items3
+    items = items1[1:] + items2 + items3
     
     for idx, item in enumerate(items):
       if keyword in item.text:
@@ -71,7 +71,7 @@ def download_bok_statistics_by_keyword():
     change = [t.text for i, t in enumerate(table_items) if i % 3 == 2]
     
     # CSV형태의 파일로 저장하기
-    result_file = open('./data/bok_statistics_%s.csv' % keyword, 'w')
+    result_file = open('../../dataset/bok_statistics_%s.csv' % keyword, 'w')
     
     for i in range(len(date)):
       result_file.write("%s, %s, %s" % (date[i], value[i], change[i]))
@@ -83,7 +83,8 @@ def download_bok_statistics_by_keyword():
     return date, value, change
   
 # "CD수익률" 통계지표를 별도로 검색, CSV 파일로 저장하기
-
+result = download_bok_statistics_by_keyword()
+print(result)
     
     
     
