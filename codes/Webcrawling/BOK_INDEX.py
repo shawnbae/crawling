@@ -22,3 +22,20 @@ def download_bok_statistics():
 
 download_bok_statistics()
 
+# 통계지표 검색어로 CSV파일 저장하기
+def download_bok_statistics_by_keyword():
+  
+  item_found = 0
+  while not item_found:
+    
+    # 검색어 초기화하기
+    keyword = ""
+    while len(keyword)== 0:
+      keyword = str(input("검색할 항목을 입력하세요: "))
+      
+    # 웹드라이버 실행
+    
+      
+      
+      
+      
