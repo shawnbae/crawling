@@ -1,3 +1,4 @@
+# pyperclip으로 복사 + 붙여넣기 활용하여 로그인 우회하는 방법
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
