@@ -4,6 +4,9 @@ browser = webdriver.Chrome("c:/chromedriver.exe")
 browser.maximize_window()
 browser.get('https://naver.com')
 
+# 모니터(해상도) 높이인 1080위치로 스크롤 내리기
+browser.execute_script("window.scrollTo(0,1080)")
+
 # 화면 가장 아래로 스크롤 내리기
 browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
@@ -27,3 +30,5 @@ while True:
     break
   
   prev_height = curr_height
+  
+browser.quit()
