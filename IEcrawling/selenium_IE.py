@@ -5,6 +5,8 @@ from selenium import webdriver
 driver = webdriver.Ie("c:/IEDriverServer.exe")
 driver.get("https://naver.com")
 
+# 
+
 # from collections import Iterable
 # import time
 # from selenium import webdriver
