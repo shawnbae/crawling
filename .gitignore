@@ -1,6 +1,7 @@
 ###### ignore 폴더 및 파일
 dataset/
 */dataset/
+*/resource/
 
 
 # Created by https://www.gitignore.io/api/venv,python,jupyternotebooks
